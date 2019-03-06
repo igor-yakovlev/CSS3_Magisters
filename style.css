@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=cyrillic');
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+/* Оформление параграфов */
+body{background: #333333 url("images/18.jpg") repeat-x top left;
+
+}
+#page{
+    width: 960px;
+    margin: 0 auto;
+    height: 2000px;
+}
+
+
+#navigation{
+    height: 65px;
+
+
+}
+
+#navigation ul li{
+    float: left;
+    position: relative;
+    width: 100px;
+
+}
+
+#navigation ul li a{
+    color: white;
+    padding: 0 20px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    text-decoration: none;
+    line-height: 65px;
+    display: block;
+    height: 65px;
+}
+
+#navigation ul li a:hover{
+    background: rgba(93, 23, 11, 0.78);
+    text-decoration: underline;
+    font-style: italic;
+}
+
+/*Выпадающая панель 1*/
+#navigation .dropdown{
+   position: absolute;
+   top: 100%;
+    width: 100px;
+    background: #3a3a3a;
+    display: none;
+
+}
+
+#navigation li:hover .dropdown{
+    display: block;
+
+}
+
+#navigation .dropdown li{
+    width: 100%;
+    height: 45px;
+}
+
+#navigation .dropdown li a{
+line-height:  45px;
+height: 45px;
+
+}
+
+/*Выпадающая панель 2*/
+#navigation .dropdown2{
+    position: absolute;
+    top: 100%;
+    width: 100px;
+    background: #3a3a3a;
+    display: none;
+
+}
+
+
+#navigation .dropdown2 li{
+    width: 100%;
+    height: 45px;
+}
+
+#navigation .dropdown2 li a{
+ line-height: 45px;
+ height: 45px;
+
+}
+
+#navigation li:hover .dropdown2 {
+    display: block;
+}
+
+/*Выпадающий список 3*/
+#navigation .dropdown3 {
+    position: absolute;
+    top: 100%;
+    display: none;
+}
+
+#navigation .dropdown3 li{
+    width: 100%;
+    height: 45px;
+
+}
+
+#navigation .dropdown3 li a{
+    line-height: 45px;
+    height: 45px;
+}
+
+#navigation li:hover .dropdown3{
+    background: #333333;
+    display: block;
+}
+
+/*Логотип*/
+#header{
+    height: 204px;
+    position: relative;
+    top: 0;
+}
+
+.logo{
+   display: block ;
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
+
+.search{
+    position: absolute;
+    right: 100px;
+    top: 90px;
+}
+
+/*Основная информация, Правая панель, Подвал*/
+
+#content:before,
+#content:after {
+    content:"";
+    display:table;
+}
+#content:after {
+    clear:both;
+}
+#content {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+#article {
+    width: 740px;
+    padding-left: 20px;
+    float: right;
+    padding-top: 20px;
+}
+
+
+#article p{
+    color: white;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    text-align: justify;
+    padding-top: 20px;
+    font-size: 20px;
+
+}
+
+
+
+
+
+#article h1{
+    color: white;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 45px;
+}
+
+#article h2{
+    padding-top: 20px;
+    color: white;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 35px;
+}
+
+#article h3{
+    padding-top: 20px;
+    color: white;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 25px;
+}
+
+#sidebar{
+    width: 200px;
+    float: left;
+    padding-top: 20px;
+}
+
+#sidebar ul li{
+    color: white;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+
+/*Модальное окно*/
+
+#fixed{
+    height: 100%;
+    width: 100%;
+    background: rgba(255,255,255,0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.modal-body{
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -200px;
+}
+
+/*Псевдоклассы*/
+
+.pseudo-class{
+    color: red;
+}
+
+.pseudo-class:hover{
+    color: green;
+}
+
+.pseudo-class:visited{
+    color: blue;
+}
+
+.pseudo-class:focus{
+    color: yellow;
+}
+
+/*#article p:first-of-type{*/
+    /*color: green;}*/
+
+#article p:nth-of-type(3){
+    color: green;}
+
+
+/*Псевдоэлементы*/
+.pseudo-element::before,
+.pseudo-element::after{
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: rebeccapurple;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.first-letter::first-letter{
+    color: crimson;
+    font-size: 48px;
+    display: block;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.first-line::first-line{
+    font-size: 24px;
+    color: darkcyan;
+
+}
+
+::selection{
+    background: darkgray;
+    color: yellow;
+}
+
+/*Селектор атрибута*/
+a[target="_blank"]{
+    color: blue;
+}
+
+a[title~="внешняя"]{
+    color: red;
+}
+
+a[class|="social"]{
+    color: rosybrown;
+}
+
+a[title^="social"]{
+    color: fuchsia;
+}
+
+a[title$="icon"]{
+    color: darkslateblue;
+}
+
+a[title$="icon"]{
+    color: darkslateblue;
+}
+
+a[title*="co"]{
+    color: darkcyan;
+}
+
+input[type="text"]{
+    border: 1px solid darkcyan;
+}
+
+input[type="button"]{
+    border: 4px solid darkcyan;
+    color: white;
+    background: brown;
+}
+
+/*Использование спрайтов*/
+
+.icon{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-image: url("images/sprite.png");
+
+}
+
+.icon.icon-car{
+    background-position: 0 0;
+}
+
+.icon.icon-car:hover {
+    background-position: 0 -40px;
+}
+
+.icon.icon-check{
+    background-position: -40px 0;
+}
+
+.icon.icon-check:hover {
+    background-position: -40px -40px;
+}
+
+.icon.icon-cart{
+    background-position: -80px 0;
+}
+
+.icon.icon-cart:hover {
+    background-position: -80px -40px;
+}
+
+.icon.icon-comments{
+    background-position: -120px 0;
+}
+
+.icon.icon-comments:hover {
+    background-position: -120px -40px;
+}
